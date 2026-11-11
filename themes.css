@@ -1984,3 +1984,15 @@ body:has(.win.maximized:not([hidden])) #mbar {
 :root[data-pixelbg][data-active-theme="gameboy"] #themeScene .s1 {
   color: #0f380f;
 }
+
+/* Mobile (iOS/Android): evita lo zoom automatico al focus sui campi di testo.
+   I browser mobili (Safari iOS in particolare) zoomano se il font è < 16px. */
+@media (hover: none) and (pointer: coarse), (max-width: 820px) and (pointer: coarse) {
+  input,
+  textarea,
+  select,
+  [contenteditable],
+  .ti-ghost {
+    font-size: 16px !important;
+  }
+}
