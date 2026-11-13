@@ -4678,7 +4678,7 @@
         "SonicVisual_Studio/",
         "",
         "Strumenti",
-        "sonicvisual.svg",
+        "sonicvisual.jpg",
       );
       a(
         "web",
@@ -4688,7 +4688,7 @@
         "scp/",
         "",
         "Portali",
-        "scp.svg",
+        "scp.jpg",
       );
       a(
         "web",
@@ -4698,7 +4698,7 @@
         "defuser/",
         "",
         "App",
-        "defuser.svg",
+        "defuser.jpg",
       );
       a(
         "web",
@@ -4708,7 +4708,7 @@
         "alice/",
         "",
         "Portali",
-        "alice.svg",
+        "alice.jpg",
       );
       a(
         "web",
@@ -4718,7 +4718,7 @@
         "assisi/",
         "",
         "Portali",
-        "assisi.svg",
+        "assisi.jpg",
       );
       a(
         "web",
@@ -4728,7 +4728,7 @@
         "linkshelf/",
         "",
         "Strumenti",
-        "linkshelf.svg",
+        "linkshelf.jpg",
       );
       a(
         "web",
@@ -4738,7 +4738,7 @@
         "HUB/",
         "",
         "Strumenti",
-        "hub.svg",
+        "hub.jpg",
       );
       a(
         "web",
@@ -4748,7 +4748,7 @@
         "old_portfolio/",
         "",
         "Portali",
-        "page.png",
+        "old_portfolio.jpg",
       );
       a(
         "web",
@@ -4778,7 +4778,7 @@
         "",
         "",
         "Portali",
-        "paper.png",
+        "portfolio_hub.jpg",
       );
 
       /* GAME — con screenshot reali */
@@ -4820,7 +4820,7 @@
         "space_game/index.html",
         "",
         "Giochi",
-        "space_game.png",
+        "spacegame.png",
       );
       a(
         "game",
@@ -4830,7 +4830,7 @@
         "space_shooter/index.html",
         "",
         "Giochi",
-        "spacegame.png",
+        "space_game.png",
       );
       a(
         "game",
@@ -5148,10 +5148,10 @@
         "Prototipo Stove",
         "Interfaccia grafica e prototipo funzionante in Figma di un'app per la gestione domestica delle stufe, sviluppati durante l'ITS Academy LAST.",
         "Figma, UI, UX",
-        "",
+        "https://www.figma.com/file/aVVNqbTn3qFB69eTG17imo/Untitled?type=design&node-id=88%3A828&mode=design&t=2ieOiKQFAiT4OxO1-1",
         "",
         "Figma",
-        "",
+        "page.png",
       );
       a(
         "graphic",
@@ -5225,6 +5225,9 @@
           p.audio = "public/" + p.audio;
         if (p.d === "web" && p.u && !/^https?:/.test(p.u))
           p.u = "https://dennisbottari.it/" + p.u;
+        // giochi, download e file locali vivono in public/
+        else if (p.u && !/^(https?:|public\/)/.test(p.u))
+          p.u = "public/" + p.u;
       });
 
       const $ = (s) => document.querySelector(s),
